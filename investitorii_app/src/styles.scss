@@ -65,6 +65,12 @@ body {
     box-sizing: border-box;
     margin: 0;
     overflow-x: hidden;
+    hr {
+        margin: 5px 0;
+        border: solid 1px #cecece;
+        background-color: #cecece;
+        height: 0.5px;
+    }
     .bold-subtitle {
         font-weight: 700;
         font-size: 1.5rem;
