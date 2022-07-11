@@ -1,0 +1,33 @@
+$mainColor: #ffd800;
+$secondaryColor: #006378;
+$fontStyleMain: 'Open Sans',
+sans-serif;
+$fontStyleSecond: 'Oswald',
+sans-serif;
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+.header {
+    background-color: $mainColor;
+    padding: 15px;
+    margin-bottom: 20px;
+    .header-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo {
+        width: 10%;
+        height: 10%;
+    }
+    .container-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    .header-icon-img {
+        max-width: 60px;
+        display: inline-block;
+        margin-right: 20px;
+    }
+}
