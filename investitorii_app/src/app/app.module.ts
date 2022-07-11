@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CheckoutFormComponent } from './checkout/checkout-form/checkout-form.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { FooterComponent } from './navigation/footer/footer.component';
+import { SideContentComponent } from './side-content/side-content.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './navigation/footer/footer.component';
     CheckoutComponent,
     CheckoutFormComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SideContentComponent
   ],
   imports: [
     BrowserModule,
