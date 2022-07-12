@@ -2,38 +2,20 @@
 // For more information: https://material.angular.io/guide/theming
 @use "@angular/material" as mat;
 // Plus imports for other components in your app.
-
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
 @include mat.core();
-
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $investitorii-app-primary: mat.define-palette(mat.$indigo-palette);
-$investitorii-app-accent: mat.define-palette(
-  mat.$pink-palette,
-  A200,
-  A100,
-  A400
-);
-
+$investitorii-app-accent: mat.define-palette( mat.$pink-palette, A200, A100, A400);
 // The warn palette is optional (defaults to red).
 $investitorii-app-warn: mat.define-palette(mat.$red-palette);
-
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$investitorii-app-theme: mat.define-light-theme(
-  (
-    color: (
-      primary: $investitorii-app-primary,
-      accent: $investitorii-app-accent,
-      warn: $investitorii-app-warn,
-    ),
-  )
-);
-
+$investitorii-app-theme: mat.define-light-theme( ( color: ( primary: $investitorii-app-primary, accent: $investitorii-app-accent, warn: $investitorii-app-warn, ), ));
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
@@ -41,25 +23,97 @@ $investitorii-app-theme: mat.define-light-theme(
 
 /* You can add global styles to this file, and also import other style files */
 
-html,
-body {
-  height: 100%;
+$mainColor: #ffd800;
+$secondaryColor: #006378;
+$fontStyleMain: 'Open Sans',
+sans-serif;
+$fontStyleSecond: 'Oswald',
+sans-serif;
+::-webkit-scrollbar {
+    width: 15px;
 }
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: $mainColor;
+    box-shadow: inset 0 0 5px #111;
+    border-radius: 50px;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #111;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #333;
+}
+
 body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  .two-col-container {
+    background-color: rgb(218, 218, 218);
+    color: #222;
+    min-height: 100vh;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+    hr {
+        margin: 5px 0;
+        border: solid 1px #cecece;
+        background-color: #cecece;
+        height: 0.5px;
+    }
+    .bold-subtitle {
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    p {
+        color: #333;
+        font-family: $fontStyleMain;
+    }
+    .mt {
+        margin-top: 2rem;
+    }
+    img {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .flex-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .two-col-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .container-wrapper {
+        min-width: 1200px;
+        max-width: 1200px;
+    }
+    .container {
+        background-color: #fff;
+        padding: 25px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, .2);
+    }
+}
+
+.main-section {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-  }
-  .container-wrapper {
-    min-width: 1200px;
-    max-width: 1200px;
-  }
-  .container {
-    background-color: #fff;
-    padding: 25px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  }
+    align-items: center;
+    position: relative;
 }

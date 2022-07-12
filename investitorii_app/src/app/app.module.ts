@@ -30,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CheckoutFormComponent } from './checkout/checkout-form/checkout-form.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { FooterComponent } from './navigation/footer/footer.component';
+import { SideContentComponent } from './side-content/side-content.component';
 import { LoginComponent } from './authentication/login/login.component';
 import { RegisterComponent } from './authentication/register/register.component';
 
@@ -40,6 +41,7 @@ import { RegisterComponent } from './authentication/register/register.component'
     CheckoutFormComponent,
     HeaderComponent,
     FooterComponent,
+    SideContentComponent
     LoginComponent,
     RegisterComponent
   ],
