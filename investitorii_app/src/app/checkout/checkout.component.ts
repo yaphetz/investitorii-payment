@@ -8,8 +8,23 @@ import { Component, OnInit } from '@angular/core';
 export class CheckoutComponent implements OnInit {
 
   constructor() { }
+  products: any = []
 
   ngOnInit(): void {
+    this.products= [{
+      name: 'Investitorii VIP',
+      price: '199$',
+    },
+    {
+        name: 'Curs Crypto',
+        price: '99$',
+    },
+    {
+      name: 'Curs Bursa',
+      price: '299$',
+  }]
   }
+
+
 
 }

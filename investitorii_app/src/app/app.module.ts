@@ -41,7 +41,7 @@ import { RegisterComponent } from './authentication/register/register.component'
     CheckoutFormComponent,
     HeaderComponent,
     FooterComponent,
-    SideContentComponent
+    SideContentComponent,
     LoginComponent,
     RegisterComponent
   ],
