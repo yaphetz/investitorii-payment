@@ -2,7 +2,7 @@
     <div class="container">
         <p><span class="bullet-number">1</span> <span class="bold-subtitle">Detalii Cont</span></p>
 
-        <form class="checkout-form">
+        <form *ngIf="!orderComplete" class="checkout-form">
 
             <div class="form-inputs">
                 <mat-form-field class="example-full-width" appearance="fill">
@@ -17,7 +17,7 @@
     
                   <mat-form-field class="example-full-width" appearance="fill">
                     <mat-label>Email</mat-label>
-                    <input matInput placeholder="Ex. marius@example.com" value="">
+                    <input #email matInput placeholder="Ex. marius@example.com" value="">
                   </mat-form-field>
     
                   <mat-form-field class="example-full-width" appearance="fill">
@@ -30,7 +30,9 @@
                     <input matInput placeholder="Ex. Marius" value="">
                   </mat-form-field>
             </div>
-            <button mat-raised-button class="continue-button" color="primary">Continuă</button>
+            <button mat-raised-button class="continue-button" color="primary" (click)="openPaylike(order)">Continuă</button>
+
+            <app-register *ngIf="orderComplete" [email]="email.value"></app-register>
 
         </form>
 
