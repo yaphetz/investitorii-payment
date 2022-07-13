@@ -3,13 +3,19 @@
 <form>
     <p>
         <mat-form-field>
-            <input #emailInput type="text" matInput placeholder="Email" >
+            <input #emailInput type="text" [value]="email" matInput placeholder="Email" >
         </mat-form-field>
     </p>
 
     <p>
         <mat-form-field>
             <input #passwordInput type="password" matInput placeholder="Parola" >
+        </mat-form-field>
+    </p>
+
+    <p>
+        <mat-form-field>
+            <input [disabled]="!passwordInput" #passwordConfirmationInput type="password" matInput placeholder="Parola" >
         </mat-form-field>
     </p>
 
