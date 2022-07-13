@@ -3,7 +3,7 @@
         <p><span class="bold-subtitle">Detalii Cont</span></p>
         <hr />
 
-        <form class="checkout-form">
+        <form *ngIf="!orderComplete" class="checkout-form">
 
             <div class="form-inputs">
                 <mat-form-field class="example-full-width" appearance="fill">
@@ -18,10 +18,11 @@
 
                 <mat-form-field class="example-full-width" appearance="fill">
                     <mat-label>Email</mat-label>
+
                     <input matInput placeholder="Ex. marius@example.com" value="">
                 </mat-form-field>
 
-                <mat-form-field class="example-full-width" appearance="fill" value="">
+                  <mat-form-field class="example-full-width" appearance="fill">
                     <mat-label>Telefon</mat-label>
                     <input type="text" matInput placeholder="Ex. +40 111 222 333" value="">
                 </mat-form-field>
@@ -31,7 +32,9 @@
                     <input matInput placeholder="Ex. Strada Cernavoda nr. 4" value="">
                 </mat-form-field>
             </div>
-            <button mat-raised-button class="continue-button" color="primary">Continuă</button>
+            <button mat-raised-button class="continue-button" color="primary" (click)="openPaylike(order)">Continuă</button>
+
+            <app-register *ngIf="orderComplete" [email]="email.value"></app-register>
 
         </form>
 
