@@ -5,7 +5,7 @@ sans-serif;
 $fontStyleSecond: 'Oswald',
 sans-serif;
 .right-container {
-    margin-left: 20px;
+    margin-left: 0;
     .first-right {
         .icon-box {
             display: flex;
@@ -35,8 +35,10 @@ sans-serif;
         margin-right: 20px;
     }
     .bold-subtitle {
-        font-size: 1.2rem;
-        color: $secondaryColor;
+        font-size: 1.4rem;
+        color: #444;
+        font-family: $fontStyleSecond;
+        margin: 10px 0;
     }
     p {
         font-size: .9rem;
@@ -44,5 +46,30 @@ sans-serif;
     }
     hr {
         margin: 5px 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .right-container {
+        margin-left: 0;
+        .first-right {
+            .icon-box {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin-bottom: 20px;
+            }
+        }
+        .icon-img {
+            max-width: 50px;
+            margin-right: 20px;
+        }
+        .second-right {
+            .card-img {
+                display: inline-block;
+                max-width: 70px;
+                margin: 10px;
+            }
+        }
     }
 }

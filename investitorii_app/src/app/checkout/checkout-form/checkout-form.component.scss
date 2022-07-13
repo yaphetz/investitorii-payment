@@ -4,24 +4,12 @@ $fontStyleMain: 'Open Sans',
 sans-serif;
 $fontStyleSecond: 'Oswald',
 sans-serif;
-.left-container {
-    margin-right: 20px;
-    .bullet-number {
-        background-color: #ffd800;
-        border-radius: 50%;
-        display: inline-block;
-        width: 2rem;
-        aspect-ratio: 1;
-        text-align: center;
-        color: #111;
-        margin-right: 10px;
-        font-size: 1.5rem;
-        font-weight: 700;
-        padding: 0;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-    }
+.left-container {}
+
+.bold-subtitle {
+    margin: .5rem 0 1rem;
+    font-family: $fontStyleSecond;
+    font-size: 2rem;
 }
 
 .form-inputs {
@@ -31,5 +19,24 @@ sans-serif;
 }
 
 .continue-button {
+    padding: 5px 45px;
+    background-color: green;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: $fontStyleMain;
+}
 
+@media (max-width: 600px) {
+    .left-container {
+        margin: 0;
+    }
+    .form-inputs {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: unset;
+    }
+    .continue-button {
+        width: 100%;
+    }
 }
