@@ -3,36 +3,41 @@
         <p><span class="bold-subtitle">Detalii Cont</span></p>
         <hr />
 
-        <form *ngIf="!orderComplete" class="checkout-form">
+        <form *ngIf="!orderComplete" [formGroup]="checkoutForm" class="checkout-form">
 
             <div class="form-inputs">
                 <mat-form-field class="example-full-width" appearance="fill">
                     <mat-label>Nume</mat-label>
-                    <input matInput placeholder="Ex. Constantinescu" value="">
+                    <input matInput formControlName="secondName" placeholder="Ex. Constantinescu" value="">
+                    <mat-error *ngIf="checkoutForm.controls['secondName'].invalid">Introdu un nume</mat-error>
                 </mat-form-field>
 
                 <mat-form-field class="example-full-width" appearance="fill">
                     <mat-label>Prenume</mat-label>
-                    <input matInput placeholder="Ex. Marius" value="">
+                    <input matInput formControlName="firstName" placeholder="Ex. Marius" value="">
+                    <mat-error *ngIf="checkoutForm.controls['firstName'].invalid">Introdu un prenume</mat-error>
+
                 </mat-form-field>
 
                 <mat-form-field class="example-full-width" appearance="fill">
                     <mat-label>Email</mat-label>
-
-                    <input #email matInput placeholder="Ex. marius@example.com" value="">
+                    <input #email matInput formControlName="email" placeholder="Ex. marius@example.com" value="">
+                    <mat-error *ngIf="checkoutForm.controls['email'].invalid">Introdu un email valid</mat-error>
                 </mat-form-field>
 
                   <mat-form-field class="example-full-width" appearance="fill">
                     <mat-label>Telefon</mat-label>
-                    <input type="text" matInput placeholder="Ex. +40 111 222 333" value="">
+                    <input type="text" matInput formControlName="phone" placeholder="Ex. +40 111 222 333" value="">
+                    <mat-error *ngIf="checkoutForm.controls['phone'].invalid">Introdu un numar de telefon valid</mat-error>
                 </mat-form-field>
 
                 <mat-form-field class="example-full-width" appearance="fill">
                     <mat-label>Adresa</mat-label>
-                    <input matInput placeholder="Ex. Strada Cernavoda nr. 4" value="">
+                    <input matInput formControlName="adress" placeholder="Ex. Strada Cernavoda nr. 4" value="">
+                    <mat-error *ngIf="checkoutForm.controls['adress'].invalid">Introdu o adresă validă</mat-error>
                 </mat-form-field>
             </div>
-            <button mat-raised-button class="continue-button" color="primary" (click)="openPaylike(order)">Continuă</button>
+            <button mat-raised-button class="continue-button" color="primary" (click)="submitForm()">Continuă</button>
 
             <app-register *ngIf="orderComplete" [email]="email.value"></app-register>
 

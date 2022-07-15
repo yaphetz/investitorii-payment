@@ -23,6 +23,10 @@ import { MatProgressBarModule } from "@angular/material/progress-bar";
 import { MatChipsModule } from "@angular/material/chips";
 import { MatSortModule } from "@angular/material/sort";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
+import {CdkAccordionModule} from '@angular/cdk/accordion';
+import {MatExpansionModule} from '@angular/material/expansion';
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +38,11 @@ import { FooterComponent } from './navigation/footer/footer.component';
 import { SideContentComponent } from './side-content/side-content.component';
 import { LoginComponent } from './authentication/login/login.component';
 import { RegisterComponent } from './authentication/register/register.component';
+import { ClientComponent } from './client/client.component';
+import { PaymentDoneComponent } from './authentication/register/payment-done/payment-done.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SubscriptionsComponent } from './dashboard/subscriptions/subscriptions.component';
+import { TransactionsComponent } from './dashboard/transactions/transactions.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +53,12 @@ import { RegisterComponent } from './authentication/register/register.component'
     FooterComponent,
     SideContentComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ClientComponent,
+    PaymentDoneComponent,
+    TransactionsComponent,
+    DashboardComponent,
+    SubscriptionsComponent
   ],
   imports: [
     BrowserModule,
@@ -82,7 +96,9 @@ import { RegisterComponent } from './authentication/register/register.component'
     MatChipsModule,
     MatProgressBarModule,
     MatSortModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    CdkAccordionModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent],

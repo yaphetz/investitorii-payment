@@ -15,7 +15,7 @@ router.get('', function(req, res, next) {
 })
     .then(function(){
       res.send(true);
-        console.log('Captured USD 12.00 appearing as "Awesome #5011" on customers bank statement');
+        console.log('Captured USD 12.00 from transaction '+transactionID);
     })
     .catch(error=> {
       res.send(false)

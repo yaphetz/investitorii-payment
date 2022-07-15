@@ -21,7 +21,7 @@
     </p>
 
     <div class="login-button-container">
-        <button type="button" class="login-button" mat-raised-button >
+        <button (click)="signin(emailInput.value, passwordInput.value)" type="button" class="login-button" mat-raised-button >
             <span *ngIf="!signinFetching" >Login</span>
             <span *ngIf="signinFetching" >Loging in</span>
         </button>

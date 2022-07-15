@@ -8,7 +8,32 @@ sans-serif;
     width: 15px;
 }
 
+.user-container{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    height: fit-content;
+    margin: auto 0;
+    p {
+        margin: 0;
+        color: white;
+    }
+}
+
+
+.login-button {
+    height: 3rem;
+    background-color: #72727200;
+    border: 1px solid #FFD800;
+    color: white;
+    font-weight: 600;
+    margin: auto 0;
+}
+
 .header {
+    display: flex;
+    justify-content: space-around;
     background-color: #222;
     padding: 15px;
     margin-bottom: 20px;
@@ -24,6 +49,7 @@ sans-serif;
     .logo {
         width: 8%;
         height: auto;
+        cursor: pointer;
     }
     .container-wrapper {
         display: flex;

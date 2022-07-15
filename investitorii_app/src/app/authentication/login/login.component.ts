@@ -22,10 +22,7 @@ export class LoginComponent implements OnInit {
       if (this.authService.isLoggedIn == true) {
         console.log('student?', this.authService.isStudent(this.authService.user))
         this.authService.user$.pipe(take(1)).subscribe(res=> {
-          if(this.authService.isStudent(res, true) == true)
-          this.router.navigate(["acasa"]);
-          else
-          this.router.navigate(["submissions"]);
+          this.router.navigate(["dashboard"]);
         })
 
         this.signinFetching = false;
