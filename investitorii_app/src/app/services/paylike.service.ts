@@ -10,7 +10,7 @@ declare var Paylike: any;
 })
 export class PaylikeService {
   paylike: any;
-  verifyPaymentEndpoint: string = 'http://localhost:3000/paylike';
+  verifyPaymentEndpoint: string = 'https://us-central1-investitoriiromania.cloudfunctions.net/paylike/ValidatePayment';
 
   constructor(private http: HttpClient) {
     this.paylike = Paylike({ key: 'c3eaf3ae-bc8f-4c7d-9827-499bb10ca201' });
