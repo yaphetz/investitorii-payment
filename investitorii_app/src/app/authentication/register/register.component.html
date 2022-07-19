@@ -2,7 +2,7 @@
 <mat-card-title *ngIf="(authService.firebaseAuth.user | async)">Vei fi redirecționat în {{countdown}} secunde.</mat-card-title>
 <app-payment-done></app-payment-done>
 
-<div *ngIf="!(authService.firebaseAuth.user | async)" class="register-container">
+<!-- <div *ngIf="!(authService.firebaseAuth.user | async)" class="register-container">
     <form [formGroup]="registerForm">
         <p>
             <mat-form-field>
@@ -36,4 +36,4 @@
         </div>
     
     </form>
-</div>
+</div> -->

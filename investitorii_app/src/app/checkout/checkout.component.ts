@@ -13,16 +13,8 @@ export class CheckoutComponent implements OnInit {
   ngOnInit(): void {
     this.products= [{
       name: 'Investitorii VIP',
-      price: '199$',
-    },
-    {
-        name: 'Curs Crypto',
-        price: '99$',
-    },
-    {
-      name: 'Curs Bursa',
-      price: '299$',
-  }]
+      price: '19.99$',
+    },]
   }
 
 
