@@ -1,0 +1,39 @@
+<mat-card-title *ngIf="order">Felicitări {{order.userDetails.firstName}}, plata ta a fost înregistrată</mat-card-title>
+<mat-card-title *ngIf="(authService.firebaseAuth.user | async)">Vei fi redirecționat în {{countdown}} secunde.</mat-card-title>
+<app-payment-done></app-payment-done>
+
+<div *ngIf="!(authService.firebaseAuth.user | async)" class="register-container">
+    <form [formGroup]="registerForm">
+        <p>
+            <mat-form-field>
+                <input #emailInput type="text" formControlName="email" [value]="email" matInput placeholder="Email" >
+            </mat-form-field>
+        </p>
+    
+        <p>
+            <mat-form-field>
+                <input #passwordInput [type]="hidePassword ? 'password' : 'text'" matInput placeholder="Parola" >
+                <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+                    <mat-icon class="toggle-password">{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+            </mat-form-field>
+        </p>
+    
+        <p>
+            <mat-form-field>
+                <input [disabled]="!passwordInput" [type]="hidePasswordConfirmation ? 'password' : 'text'" #passwordConfirmationInput matInput placeholder="Parola" >
+                <button mat-icon-button matSuffix (click)="hidePasswordConfirmation = !hidePasswordConfirmation" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePasswordConfirmation">
+                    <mat-icon class="toggle-password">{{hidePasswordConfirmation ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+            </mat-form-field>
+        </p>
+    
+        <p class="error">
+        </p>
+    
+        <div class="button">
+            <button type="button" (click)="signup(emailInput.value, passwordInput.value)" mat-button>Înregistrează-te</button>
+        </div>
+    
+    </form>
+</div>

@@ -1,0 +1,16 @@
+<app-checkout-form>
+</app-checkout-form>
+
+<div class="container mt">
+    <p class="bold-subtitle">Produse</p>
+    <hr />
+
+    <div class="products">
+        <ng-container *ngFor="let product of products">
+            <div class="product">
+                <span class="product-text">{{product.name}}</span>
+                <span class="product-price-text">{{product.price}}</span>
+            </div>
+        </ng-container>
+    </div>
+</div>

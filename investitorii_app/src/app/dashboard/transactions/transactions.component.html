@@ -1,0 +1,18 @@
+<mat-card-title>Tranzacții</mat-card-title>
+<hr>
+<mat-accordion>
+    <ng-container *ngFor="let transaction of transactions$|async">
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <p class="product-name">{{transaction.products[0]}}</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                <p class="product-name">{{transaction.amount/100}} {{transaction.currency}}</p>
+                <p *ngIf="transaction.dateTime" style="margin-left: auto;" class="product-name">{{transaction.dateTime.toDate().toLocaleDateString()}} {{transaction.dateTime.toDate().toLocaleTimeString()}}</p>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+          </mat-expansion-panel>
+    </ng-container>
+  </mat-accordion>

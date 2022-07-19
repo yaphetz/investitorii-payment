@@ -1,0 +1,20 @@
+<div class="header">
+    <div class="two-col-container">
+        <div class="container-wrapper">
+            <img [routerLink]="''" class="logo" src="./../../../assets/imgs/logo-yellow.png">
+            <div class="header-icon">
+                <img class="header-icon-img" src="/assets/imgs/secure-payment.png">
+                <p class="bold-subtitle">CUMPERI ÎN SIGURANȚĂ</p>
+
+            </div>
+
+
+        </div>
+    </div>
+    <button *ngIf="!(auth.firebaseAuth.user | async)" routerLink="login" class="login-button" mat-flat-button color="basic">Login</button>
+    <div *ngIf="(auth.firebaseAuth.user | async)" class="user-container">
+        <mat-icon style="color: white;">account_circle</mat-icon> 
+        <p *ngIf="(auth.firebaseAuth.user | async)">{{(auth.firebaseAuth.user | async)?.email}}</p>
+        <button (click)="auth.logout()" routerLink="login" class="login-button" mat-flat-button color="basic">Logout</button>
+    </div>
+</div>

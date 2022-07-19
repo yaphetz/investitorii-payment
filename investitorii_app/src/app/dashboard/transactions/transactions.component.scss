@@ -1,0 +1,11 @@
+::ng-deep {
+    mat-expansion-panel .mat-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.product-name {
+    margin: 0;
+    font-weight: 600;
+}

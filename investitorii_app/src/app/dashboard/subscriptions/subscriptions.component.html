@@ -1,0 +1,18 @@
+<mat-card-title>Abonamente</mat-card-title>
+<hr>
+<mat-accordion>
+    <ng-container *ngFor="let subscription of subscriptions$ | async">
+        <mat-expansion-panel >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <p class="product-name">{{subscription.products[0]}}</p>
+              </mat-panel-title>
+              <mat-panel-description>
+                <p class="product-name">{{subscription.amount/100}} {{subscription.currency}}</p>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <button mat-raised-button color="warn" (click)="removeSubscription(subscription.id)">Încheie abonament</button>
+
+          </mat-expansion-panel>
+    </ng-container>
+  </mat-accordion>

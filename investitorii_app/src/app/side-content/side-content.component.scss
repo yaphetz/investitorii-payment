@@ -1,0 +1,75 @@
+$mainColor: #ffd800;
+$secondaryColor: #006378;
+$fontStyleMain: 'Open Sans',
+sans-serif;
+$fontStyleSecond: 'Oswald',
+sans-serif;
+.right-container {
+    margin-left: 0;
+    .first-right {
+        .icon-box {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    }
+    .second-right {
+        .icon-box {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .card-img {
+            display: inline-block;
+            max-width: 100px;
+            margin: 10px;
+        }
+        .cards-wrapper .card-img:first-child {
+            margin-left: 0;
+        }
+    }
+    .icon-img {
+        max-width: 70px;
+        margin-right: 20px;
+    }
+    .bold-subtitle {
+        font-size: 1.4rem;
+        color: #444;
+        font-family: $fontStyleSecond;
+        margin: 10px 0;
+    }
+    p {
+        font-size: .9rem;
+        margin: 0;
+    }
+    hr {
+        margin: 5px 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .right-container {
+        margin-left: 0;
+        .first-right {
+            .icon-box {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin-bottom: 20px;
+            }
+        }
+        .icon-img {
+            max-width: 50px;
+            margin-right: 20px;
+        }
+        .second-right {
+            .card-img {
+                display: inline-block;
+                max-width: 70px;
+                margin: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+$mainColor: #ffd800;
+$secondaryColor: #006378;
+$fontStyleMain: 'Open Sans',
+sans-serif;
+$fontStyleSecond: 'Oswald',
+sans-serif;
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+.user-container{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    height: fit-content;
+    margin: auto 0;
+    p {
+        margin: 0;
+        color: white;
+    }
+}
+
+
+.login-button {
+    height: 3rem;
+    background-color: #72727200;
+    border: 1px solid #FFD800;
+    color: white;
+    font-weight: 600;
+    margin: auto 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #222;
+    padding: 15px;
+    margin-bottom: 20px;
+    .bold-subtitle {
+        color: $mainColor;
+        letter-spacing: 1px;
+    }
+    .header-icon {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .logo {
+        width: 8%;
+        height: auto;
+        cursor: pointer;
+    }
+    .container-wrapper {
+        display: flex;
+        justify-content: space-between;
+        min-width: 1200px;
+    }
+    .header-icon-img {
+        max-width: 10%;
+        display: inline-block;
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        .container-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-width: unset;
+        }
+        p {
+            text-align: right;
+            line-height: 120%;
+            font-family: $fontStyleSecond;
+        }
+        .logo {
+            width: 15%;
+        }
+        .header-icon-img {
+            /*
+            max-width: 20%;
+            display: inline-block;
+            margin-right: 20px;
+            */
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .header {
+        .container-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-width: unset;
+        }
+        p {
+            text-align: right;
+            line-height: 120%;
+            font-family: $fontStyleSecond;
+        }
+        .logo {
+            width: 10%;
+        }
+    }
+}
