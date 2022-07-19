@@ -17,7 +17,7 @@ app.get('/ValidatePayment', async (req, res) => {
   })
       .then(function(){
         res.send(true);
-          console.log('Captured USD 12.00 from transaction '+transactionID);
+          console.log(`Captured ${currency} ${amount} from transaction `+transactionID);
       })
       .catch(error=> {
         res.send(false)
