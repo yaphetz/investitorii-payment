@@ -1,4 +1,12 @@
+
 <div class="lists-container">
+    <div *ngIf="userDefaultPassword" class="change-password-notice"> 
+        <p >
+            Parola ta nu este încă setată, pentru a avea acces complet asupra contului schimbă parola sau folosește opțiunea "Am uitat parola" din pagina Login.
+        </p>
+        
+        <button [routerLink]="['/change-password']" mat-raised-button>Schimbă parola</button>
+    </div>
     <app-subscriptions></app-subscriptions>
     <app-transactions></app-transactions>
 </div>

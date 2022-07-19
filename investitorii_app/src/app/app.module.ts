@@ -43,6 +43,7 @@ import { PaymentDoneComponent } from './authentication/register/payment-done/pay
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SubscriptionsComponent } from './dashboard/subscriptions/subscriptions.component';
 import { TransactionsComponent } from './dashboard/transactions/transactions.component';
+import { ChangePasswordComponent } from './authentication/change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { TransactionsComponent } from './dashboard/transactions/transactions.com
     PaymentDoneComponent,
     TransactionsComponent,
     DashboardComponent,
-    SubscriptionsComponent
+    SubscriptionsComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,

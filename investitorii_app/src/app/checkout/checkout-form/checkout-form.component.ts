@@ -40,7 +40,6 @@ export class CheckoutFormComponent implements OnInit {
       adress: ['', Validators.required],
     })
 
-    this.auth.changePassword();
   }
 
   submitForm() {

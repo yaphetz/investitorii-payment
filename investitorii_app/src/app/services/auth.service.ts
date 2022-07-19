@@ -58,7 +58,8 @@ export class AuthService {
       });
   }
 
-  async changePassword() {
+  async changePassword(password: any) {
+    (await this.firebaseAuth.currentUser).updatePassword(password);
   }
 
   async logout() {
@@ -85,6 +86,7 @@ export class AuthService {
       uid: user.uid,
       roles: ["student"],
       displayName: user.displayName,
+      defaultPassword: true,
       email: user.email,
     };
     return userRef.set(data);

@@ -1,0 +1,18 @@
+.error {
+    color: red;
+    background: antiquewhite;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.login-button-container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 1rem;
+
+    .login-button {
+        width: 100%;
+    }
+}
+

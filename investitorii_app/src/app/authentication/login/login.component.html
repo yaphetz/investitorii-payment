@@ -17,7 +17,8 @@
         </mat-form-field>
     </p>
 
-    <p class="error">
+    <p *ngIf="error" class="error">
+        {{error}}
     </p>
 
     <div class="login-button-container">
@@ -25,6 +26,8 @@
             <span *ngIf="!signinFetching" >Login</span>
             <span *ngIf="signinFetching" >Loging in</span>
         </button>
+
+        <p>Am uitat parola</p>
     </div>
 
 </form>
