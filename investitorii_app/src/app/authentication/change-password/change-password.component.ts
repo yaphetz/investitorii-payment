@@ -19,13 +19,19 @@ export class ChangePasswordComponent {
   async changePassword(password: string) {
     this.signinFetching = true;
     this.error = null;
-    await this.authService.changePassword(password).then(() => {
-      this.signinFetching = false;
-    })
-    .catch(error=> {
+    try {
+      await this.authService.changePassword(password)
+      .then((res) => {
+        console.log(res)
+      })
+      .catch(error=> {
+        console.log(error)
+        this.signinFetching = false;
+        this.error = 'S-a produs o eroare';
+      });
+    } catch (error) {
       console.log(error)
-      this.signinFetching = false;
-      this.error = 'S-a produs o eroare';
-    });
+    }
+
   }
 }

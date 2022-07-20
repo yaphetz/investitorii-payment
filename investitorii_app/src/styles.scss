@@ -57,7 +57,12 @@ sans-serif;
     background: #333;
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    height: 100%;
     background-color: rgb(218, 218, 218);
     color: #222;
     min-height: 100vh;

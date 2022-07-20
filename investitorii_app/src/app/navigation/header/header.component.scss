@@ -8,6 +8,26 @@ sans-serif;
     width: 15px;
 }
 
+
+.main-toolbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #222222;
+    padding: 1rem;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+
+    .logo {
+        max-height: 4rem;
+    }
+
+    .bold-subtitle {
+        color: $mainColor;
+    }
+}
+
 .user-container{
     display: flex;
     align-items: center;

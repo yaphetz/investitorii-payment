@@ -16,11 +16,3 @@
     }
 }
 
-::ng-deep {
-    app-root {
-        min-height: 100vh;
-        display: grid;
-        grid-template-rows: min-content min-content 1fr min-content;
-        grid-template-columns: 1fr;
-    }
-}

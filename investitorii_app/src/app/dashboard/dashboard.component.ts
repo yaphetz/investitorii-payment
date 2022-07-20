@@ -14,11 +14,21 @@ export class DashboardComponent implements OnInit {
   constructor(private auth: AuthService, private firestore: AngularFirestore) { }
 
   userDefaultPassword : boolean;
+  resetPasswordSent : any;
+
+  public sendChangePasswordEmail() {
+    this.auth.user$.pipe(take(1)).subscribe(user=> {
+      this.auth.sendChangePasswordEmail(user.email);
+      this.firestore.collection('users').doc(user.uid).update({defaultPassword: false}).then( ()=> {
+        this.userDefaultPassword = false;
+        this.resetPasswordSent = { sent: true, email: user.email};
+      })
+    }) 
+  }
+
   ngOnInit(): void {
     this.auth.user$.pipe(take(1)).subscribe( user => {
-      let userId = user.uid;
       this.userDefaultPassword = user.defaultPassword;
-      console.log(user)
     })
   }
 

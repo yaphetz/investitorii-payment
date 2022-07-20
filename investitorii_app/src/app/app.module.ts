@@ -44,6 +44,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SubscriptionsComponent } from './dashboard/subscriptions/subscriptions.component';
 import { TransactionsComponent } from './dashboard/transactions/transactions.component';
 import { ChangePasswordComponent } from './authentication/change-password/change-password.component';
+import { ForgotPasswordComponent } from './authentication/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { ChangePasswordComponent } from './authentication/change-password/change
     TransactionsComponent,
     DashboardComponent,
     SubscriptionsComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,

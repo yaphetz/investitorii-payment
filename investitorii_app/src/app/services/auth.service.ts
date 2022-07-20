@@ -62,6 +62,10 @@ export class AuthService {
     (await this.firebaseAuth.currentUser).updatePassword(password);
   }
 
+  async sendChangePasswordEmail(email: string) {
+    this.firebaseAuth.sendPasswordResetEmail(email);
+  }
+
   async logout() {
     await this.firebaseAuth.signOut();
     this.menuStatus = false;

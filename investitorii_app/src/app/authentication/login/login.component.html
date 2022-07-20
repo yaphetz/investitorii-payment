@@ -27,7 +27,7 @@
             <span *ngIf="signinFetching" >Loging in</span>
         </button>
 
-        <p>Am uitat parola</p>
+        <p (click)="sendChangePasswordEmail(emailInput.value)">Am uitat parola</p>
     </div>
 
 </form>

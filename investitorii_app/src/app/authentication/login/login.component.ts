@@ -35,6 +35,10 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  public async sendChangePasswordEmail(email: string) {
+    this.authService.sendChangePasswordEmail(email);
+  }
+
   ngOnInit(): void {}
 
 }

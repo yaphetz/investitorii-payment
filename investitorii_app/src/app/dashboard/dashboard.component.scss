@@ -9,4 +9,8 @@
     border: 1px solid #00000021;
     padding: 1rem;
     border-radius: 0.5rem;
+
+    &.sent {
+        background-color: #12ff3536;
+    }
 }

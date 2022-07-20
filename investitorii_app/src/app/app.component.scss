@@ -1,7 +1,8 @@
 ::ng-deep {
   app-login,
   app-register,
-  app-change-password {
+  app-change-password,
+  app-forgot-password {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,5 +12,14 @@
     padding: 2rem;
     border: 1px solid #28282817;
     border-radius: 5px;
+  }
+}
+
+::ng-deep {
+  app-root {
+    height: 100%;
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+    grid-row-gap: 1rem;
   }
 }
